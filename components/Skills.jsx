@@ -77,108 +77,129 @@ export default function Skills() {
   ];
 
   const tools = [
-    { name: "VS Code", icon: "💻", color: "#007ACC" },
-    { name: "Postman", icon: "📬", color: "#FF6C37" },
-    { name: "MongoDB Compass", icon: "🗄️", color: "#47A248" },
-    { name: "TablePlus", icon: "📊", color: "#FF6C37" },
-    { name: "Insomnia", icon: "😴", color: "#4000BF" },
-    { name: "GitHub Desktop", icon: "🐙", color: "#181717" },
-    { name: "Chrome DevTools", icon: "🔧", color: "#4285F4" },
-    { name: "Figma", icon: "🎨", color: "#F24E1E" }
+    { name: "VS Code", icon: "💻" },
+    { name: "Postman", icon: "📬" },
+    { name: "MongoDB Compass", icon: "🗄️" },
+    { name: "TablePlus", icon: "📊" },
+    { name: "Insomnia", icon: "😴" },
+    { name: "GitHub Desktop", icon: "🐙" },
+    { name: "Chrome DevTools", icon: "🔧" },
+    { name: "Figma", icon: "🎨" }
   ];
 
   return (
-    <section id="skills" className="relative py-20 overflow-hidden bg-[#090820]">
+    <section
+      id="skills"
+      className="relative py-16 sm:py-20 overflow-hidden bg-[#090820]"
+    >
       {/* Background gradient orbs */}
-      <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-[#7030EF]/20 to-[#DB1FFF]/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-l from-[#DB1FFF]/20 to-[#7030EF]/20 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-[#7030EF]/10 to-[#DB1FFF]/10 rounded-full blur-3xl"></div>
-      
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
-        backgroundSize: '40px 40px'
-      }}></div>
+      <div className="absolute top-20 left-20 w-60 h-60 sm:w-96 sm:h-96 bg-gradient-to-r from-[#7030EF]/20 to-[#DB1FFF]/20 rounded-full blur-3xl"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="absolute bottom-20 right-20 w-60 h-60 sm:w-96 sm:h-96 bg-gradient-to-l from-[#DB1FFF]/20 to-[#7030EF]/20 rounded-full blur-3xl"></div>
+
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] md:w-[800px] md:h-[800px] bg-gradient-to-r from-[#7030EF]/10 to-[#DB1FFF]/10 rounded-full blur-3xl"></div>
+
+      {/* Grid pattern overlay */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)",
+          backgroundSize: "40px 40px"
+        }}
+      ></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span 
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <span
               className="bg-gradient-to-r from-[#7030EF] via-[#DB1FFF] to-[#7030EF] bg-clip-text text-transparent bg-[length:200%_200%]"
-              style={{ animation: 'gradient 3s ease infinite' }}
+              style={{ animation: "gradient 3s ease infinite" }}
             >
               Technical Skills
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] mx-auto rounded-full"></div>
-          <p className="text-white/60 mt-4 max-w-2xl mx-auto">
-            A comprehensive overview of my technical expertise and proficiency levels
+
+          <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] mx-auto rounded-full"></div>
+
+          <p className="text-white/60 mt-4 max-w-2xl mx-auto text-sm sm:text-base px-2">
+            A comprehensive overview of my technical expertise and proficiency
+            levels
           </p>
         </div>
 
-        {/* Skills Overview Stats */}
+        {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10 hover:border-[#7030EF]/30 transition-all duration-300">
-            <div className="text-3xl mb-2 text-[#DB1FFF]">🚀</div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-transparent">36+</div>
-            <div className="text-sm text-white/50">Skills</div>
-          </div>
-          
-          <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10 hover:border-[#7030EF]/30 transition-all duration-300">
-            <div className="text-3xl mb-2 text-[#DB1FFF]">💼</div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-transparent">6</div>
-            <div className="text-sm text-white/50">Categories</div>
-          </div>
-          
-          <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10 hover:border-[#7030EF]/30 transition-all duration-300">
-            <div className="text-3xl mb-2 text-[#DB1FFF]">⭐</div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-transparent">90%</div>
-            <div className="text-sm text-white/50">Avg. Proficiency</div>
-          </div>
-          
-          <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10 hover:border-[#7030EF]/30 transition-all duration-300">
-            <div className="text-3xl mb-2 text-[#DB1FFF]">🛠️</div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-transparent">8+</div>
-            <div className="text-sm text-white/50">Tools</div>
-          </div>
+          {[
+            { icon: "🚀", value: "36+", label: "Skills" },
+            { icon: "💼", value: "6", label: "Categories" },
+            { icon: "⭐", value: "90%", label: "Avg. Proficiency" },
+            { icon: "🛠️", value: "8+", label: "Tools" }
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="text-center p-4 bg-white/5 rounded-xl border border-white/10 hover:border-[#7030EF]/30 transition-all duration-300"
+            >
+              <div className="text-2xl sm:text-3xl mb-2 text-[#DB1FFF]">
+                {item.icon}
+              </div>
+
+              <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-transparent">
+                {item.value}
+              </div>
+
+              <div className="text-xs sm:text-sm text-white/50">
+                {item.label}
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Skills Categories Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {/* Skills Categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {skillCategories.map((category, idx) => (
             <div
               key={idx}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#7030EF]/30 transition-all duration-300"
+              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-white/10 hover:border-[#7030EF]/30 transition-all duration-300"
             >
-              {/* Gradient accent */}
+              {/* Gradient top border */}
               <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] group-hover:w-full transition-all duration-300 rounded-t-full"></div>
-              
-              {/* Category header */}
+
+              {/* Header */}
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] flex items-center justify-center text-2xl transform group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] flex items-center justify-center text-xl sm:text-2xl">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white">{category.name}</h3>
+
+                <h3 className="text-lg sm:text-xl font-bold text-white">
+                  {category.name}
+                </h3>
               </div>
 
-              {/* Skills list */}
+              {/* Skills */}
               <div className="space-y-4">
                 {category.skills.map((skill, i) => (
                   <div key={i} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-white/80 text-sm flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full" style={{ backgroundColor: skill.color }}></span>
+                    <div className="flex justify-between items-center gap-2">
+                      <span className="text-white/80 text-xs sm:text-sm flex items-center gap-2">
+                        <span
+                          className="w-2 h-2 rounded-full"
+                          style={{ backgroundColor: skill.color }}
+                        ></span>
+
                         {skill.name}
                       </span>
-                      <span className="text-transparent bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-sm font-semibold">
+
+                      <span className="text-transparent bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-xs sm:text-sm font-semibold">
                         {skill.level}%
                       </span>
                     </div>
+
                     <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-                      <div 
+                      <div
                         className="h-full rounded-full transition-all duration-1000"
-                        style={{ 
+                        style={{
                           width: `${skill.level}%`,
                           background: `linear-gradient(90deg, ${skill.color}80, ${skill.color})`
                         }}
@@ -187,48 +208,54 @@ export default function Skills() {
                   </div>
                 ))}
               </div>
-
-              {/* Hover glow effect */}
-              <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#7030EF]/0 to-[#DB1FFF]/0 rounded-2xl group-hover:from-[#7030EF]/10 group-hover:to-[#DB1FFF]/10 blur-xl transition-all duration-300"></div>
             </div>
           ))}
         </div>
 
         {/* Tools & Technologies */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-          <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-2">
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] flex items-center justify-center text-white">🛠️</span>
-            Tools & Technologies I Use
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 border border-white/10 overflow-hidden">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 text-white flex items-center gap-2 flex-wrap">
+            <span className="w-8 h-8 rounded-lg bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] flex items-center justify-center text-white">
+              🛠️
+            </span>
+
+            <span>Tools & Technologies I Use</span>
           </h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {tools.map((tool, index) => (
               <div
                 key={index}
-                className="group relative p-4 bg-white/5 rounded-xl border border-white/10 hover:border-[#7030EF]/30 transition-all duration-300 flex items-center gap-3"
+                className="group relative p-4 bg-white/5 rounded-xl border border-white/10 hover:border-[#7030EF]/30 transition-all duration-300 flex items-center gap-3 min-w-0"
               >
-                <div className="text-2xl group-hover:scale-110 transition-transform">{tool.icon}</div>
-                <div>
-                  <div className="text-white/80 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#7030EF] group-hover:to-[#DB1FFF] group-hover:bg-clip-text transition-all duration-300 font-medium">
+                <div className="text-xl sm:text-2xl flex-shrink-0 group-hover:scale-110 transition-transform">
+                  {tool.icon}
+                </div>
+
+                <div className="min-w-0 flex-1">
+                  <div className="text-sm sm:text-base text-white/80 font-medium break-words group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#7030EF] group-hover:to-[#DB1FFF] group-hover:bg-clip-text transition-all duration-300">
                     {tool.name}
                   </div>
-                  <div className="w-12 h-1 bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                  <div className="w-10 sm:w-12 h-1 bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] rounded-full opacity-0 group-hover:opacity-100 transition-opacity mt-1"></div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Skill Level Legend */}
-        <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm">
+        {/* Legend */}
+        <div className="mt-8 flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-gradient-to-r from-[#7030EF] to-[#DB1FFF]"></div>
             <span className="text-white/50">Expert (90-100%)</span>
           </div>
+
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] opacity-70"></div>
             <span className="text-white/50">Advanced (80-89%)</span>
           </div>
+
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] opacity-40"></div>
             <span className="text-white/50">Intermediate (70-79%)</span>
